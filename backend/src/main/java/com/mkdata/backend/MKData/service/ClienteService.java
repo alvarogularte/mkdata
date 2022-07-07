@@ -33,7 +33,7 @@ public class ClienteService {
     return clienteRepository.findAll();
   }
 
-  public void deletarCliente(int id) {
+  public void deletarCliente(Integer id) {
     clienteRepository.deleteById(id);
   }
 }
