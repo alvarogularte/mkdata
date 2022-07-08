@@ -1,13 +1,11 @@
 package com.mkdata.backend.MKData.model;
 
-import javax.persistence.Column;
-
 public class PessoaFisica extends Cliente {
   
-  @Column
+
   private String cpf;
   
-  @Column
+
   private String rg;
 
   public PessoaFisica(String cpf, String rg) {

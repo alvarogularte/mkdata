@@ -1,34 +1,33 @@
 package com.mkdata.backend.MKData.model;
 
-import javax.persistence.Column;
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "clientes")
-public abstract class Cliente {
+public class Cliente {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
-
-  @Column(unique = true)
+  private Integer id;
   private String nome;
-
-  @Column(unique = true)
   private String tipo;
-
-  @Column(unique = true)
-  private String dataCadastro;
-
-  @Column(unique = true)
+  private LocalDate dataCadastro;
   private String grupo;
-
-  @Column(unique = true)
   private String status;
+ 
+  public Cliente(int id, String nome, String tipo, String dataCadastro, String grupo, String status) {
+    super();
+    this.id = id;
+    this.nome = nome;
+    this.tipo = tipo;
+    this.dataCadastro = LocalDate.now();
+    this.grupo = grupo;
+    this.status = status;
+  }
  
   public String getNome() {
     return nome;
@@ -42,10 +41,10 @@ public abstract class Cliente {
   public void setTipo(String tipo) {
     this.tipo = tipo;
   }
-  public String getDataCadastro() {
+  public LocalDate getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(String dataCadastro) {
+  public void setDataCadastro(LocalDate dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
   public String getGrupo() {
