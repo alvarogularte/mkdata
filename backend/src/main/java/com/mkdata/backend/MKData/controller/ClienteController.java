@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mkdata.backend.MKData.exception.ClienteJaExisteException;
 import com.mkdata.backend.MKData.model.Cliente;
+import com.mkdata.backend.MKData.model.PessoaFisica;
+import com.mkdata.backend.MKData.model.PessoaJuridica;
 import com.mkdata.backend.MKData.service.ClienteService;
 
 @RestController
@@ -21,9 +24,17 @@ public class ClienteController {
   @Autowired
   ClienteService clienteService;
   
-  @PostMapping("/clientes")
-  public ResponseEntity<Cliente> criarCliente(@RequestBody Cliente cliente) {
-    Cliente clienteCriado = clienteService.criarCliente(cliente);
+  @PostMapping("/clientespf")
+  public ResponseEntity<PessoaFisica> criarClientePf(@RequestBody PessoaFisica pessoaFisica )
+    throws ClienteJaExisteException {
+    PessoaFisica clienteCriado = clienteService.criarClientePf(pessoaFisica);
+    return ResponseEntity.status(HttpStatus.OK).body(clienteCriado);
+  }
+  
+  @PostMapping("/clientespj")
+  public ResponseEntity<PessoaJuridica> criarClientePj(@RequestBody PessoaJuridica pessoaJuridica )
+    throws ClienteJaExisteException {
+    PessoaJuridica clienteCriado = clienteService.criarClientePj(pessoaJuridica);
     return ResponseEntity.status(HttpStatus.OK).body(clienteCriado);
   }
   
