@@ -1,7 +1,5 @@
 package com.mkdata.backend.MKData.model;
 
-import java.time.LocalDate;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,16 +13,16 @@ public class Cliente {
   private Integer id;
   private String nome;
   private String tipo;
-  private LocalDate dataCadastro;
   private String grupo;
   private String status;
  
-  public Cliente(int id, String nome, String tipo, String dataCadastro, String grupo, String status) {
+  public Cliente() {}
+  
+  public Cliente(int id, String nome, String tipo, String grupo, String status) {
     super();
     this.id = id;
     this.nome = nome;
     this.tipo = tipo;
-    this.dataCadastro = LocalDate.now();
     this.grupo = grupo;
     this.status = status;
   }
@@ -41,12 +39,7 @@ public class Cliente {
   public void setTipo(String tipo) {
     this.tipo = tipo;
   }
-  public LocalDate getDataCadastro() {
-    return dataCadastro;
-  }
-  public void setDataCadastro(LocalDate dataCadastro) {
-    this.dataCadastro = dataCadastro;
-  }
+
   public String getGrupo() {
     return grupo;
   }
