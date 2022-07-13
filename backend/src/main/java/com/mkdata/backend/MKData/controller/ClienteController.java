@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ public class ClienteController {
   @Autowired
   ClienteService clienteService;
   
+  @CrossOrigin
   @PostMapping("/clientespf")
   public ResponseEntity<PessoaFisica> criarClientePf(@RequestBody PessoaFisica pessoaFisica )
     throws ClienteJaExisteException {
@@ -31,6 +33,7 @@ public class ClienteController {
     return ResponseEntity.status(HttpStatus.OK).body(clienteCriado);
   }
   
+  @CrossOrigin
   @PostMapping("/clientespj")
   public ResponseEntity<PessoaJuridica> criarClientePj(@RequestBody PessoaJuridica pessoaJuridica )
     throws ClienteJaExisteException {
@@ -38,12 +41,14 @@ public class ClienteController {
     return ResponseEntity.status(HttpStatus.OK).body(clienteCriado);
   }
   
+  @CrossOrigin
   @GetMapping("/clientes")
   public ResponseEntity<List<Cliente>> listarClientes() {
     List<Cliente> clientes = clienteService.listarClientes();
     return ResponseEntity.ok(clientes);
   }
   
+  @CrossOrigin
   @DeleteMapping("/clientes/{cliente_id}")
   public ResponseEntity<Cliente> deletarCliente(@PathVariable("cliente_id") Integer id) {
     clienteService.deletarCliente(id);
