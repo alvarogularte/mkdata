@@ -31,3 +31,37 @@ Backend funcionando com as funcionalidades:
       f) Grupo: Permitir selecionar somente uma opção.
       g) Ativo (se está ativo);     
       h) Ao gravar validar se já existe um cliente cadastrado com o CPF/CNPJ informado.
+
+# Como iniciar o projeto
+
+Primeiramente é necessário realizar o clone do projeto para sua máquina:
+```
+git clone git@github.com:alvarogularte/mkdata.git
+```
+Acesse a pasta do frontend:
+```
+cd frontend
+```
+Rode este comando para baixar as dependências necessárias:
+```
+npm install
+```
+Em seguida rode este comando para iniciar o projeto frontend:
+```
+npm start
+```
+
+Para iniciar o backend, primeiro volte à pasta raíz do projeto:
+```
+cd ..
+```
+Acesse a pasta do backend:
+```
+cd backend
+```
+Em seguida rode este comando para iniciar a aplicação spring:
+```
+mvn spring-boot:run
+```
+
+Pronto, o projeto já está rodando em sua máquina!

@@ -1,3 +1,12 @@
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/repository/PessoaJuridicaRepository.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/repository/ClienteRepository.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/service/ClienteService.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/repository/PessoaFisicaRepository.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/exception/DataError.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/controller/GerenciadorExceptionController.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/controller/ClienteController.java
 /mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/MkDataApplication.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/exception/ClienteJaExisteException.java
 /mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/model/Cliente.java
 /mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/model/PessoaFisica.java
+/mnt/c/Users/Álvaro Gularte/Documents/projects/mkdata/backend/src/main/java/com/mkdata/backend/MKData/model/PessoaJuridica.java
